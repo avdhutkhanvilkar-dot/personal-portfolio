@@ -1,0 +1,302 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f8ff;
+    color:#333;
+}
+
+/* NAVBAR */
+
+nav{
+    background:linear-gradient(135deg,#0052cc,#007bff);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+nav h2{
+    color:white;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#dbeafe;
+}
+
+/* HERO SECTION */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #001f4d,
+        #005eff,
+        #00a2ff
+    );
+    padding:40px;
+}
+
+.hero-card{
+    width:500px;
+    text-align:center;
+    padding:40px;
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.3);
+
+    transition:0.5s;
+}
+
+.hero-card:hover{
+    transform:
+    translateY(-10px)
+    scale(1.03);
+}
+
+.hero-card img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.2);
+}
+
+.hero-card h1{
+    margin-top:20px;
+    color:white;
+    font-size:32px;
+}
+
+.hero-card h3{
+    margin-top:10px;
+    color:#eaf3ff;
+}
+
+.hero-card p{
+    margin-top:15px;
+    color:white;
+    line-height:1.6;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 30px;
+    background:white;
+    color:#0052cc;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* CONTAINER */
+
+.container{
+    padding:80px 10%;
+}
+
+.container h1{
+    color:#0052cc;
+    margin-bottom:20px;
+}
+
+/* CARDS */
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    margin-top:20px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:20px;
+}
+
+.skills span{
+    background:#0052cc;
+    color:white;
+    padding:12px 20px;
+    border-radius:25px;
+    transition:0.3s;
+}
+
+.skills span:hover{
+    transform:translateY(-5px);
+}
+
+/* PROJECTS */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+    margin-top:30px;
+}
+
+.project-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.15);
+
+    transition:0.5s;
+
+    cursor:pointer;
+}
+
+.project-card:hover{
+
+    transform:
+    rotateX(10deg)
+    rotateY(-10deg)
+    translateY(-15px)
+    scale(1.05);
+
+    box-shadow:
+    0 30px 60px rgba(0,0,0,0.25);
+}
+
+.project-card h2{
+    color:#0052cc;
+    margin-bottom:15px;
+}
+
+.project-card p{
+    color:#555;
+    line-height:1.7;
+}
+
+/* CONTACT FORM */
+
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    margin-top:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+}
+
+input:focus,
+textarea:focus{
+    border-color:#0052cc;
+}
+
+button{
+    margin-top:15px;
+    padding:12px;
+    background:#0052cc;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#003f9e;
+}
+
+/* FOOTER */
+
+footer{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        margin-top:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-card{
+        width:100%;
+    }
+
+    .hero-card img{
+        width:150px;
+        height:150px;
+    }
+
+    .hero-card h1{
+        font-size:24px;
+    }
+
+    .container{
+        padding:50px 20px;
+    }
+}
